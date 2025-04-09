@@ -1,48 +1,48 @@
-# Electromagnetic Fields and Waves Tutorial
+# Elektromagnit Maydonlar va To'lqinlar Qo'llanmasi
 
-Welcome to the Electromagnetic Fields and Waves Tutorial! This web-based tutorial is designed to provide a comprehensive understanding of electromagnetic fields and waves, covering fundamental concepts, advanced theories, and practical applications.
+Elektromagnit Maydonlar va To'lqinlar Qo'llanmasiga xush kelibsiz! Ushbu veb-asoslangan qo'llanma elektromagnit maydonlar va to'lqinlar bo'yicha fundamental tushunchalar, ilg'or nazariyalar va amaliy qo'llanmalarga oid keng qamrovli bilimlarni taqdim etish uchun mo'ljallangan.
 
-## Table of Contents
+## Mundarija
 
-1. [Overview](#overview)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Lessons](#lessons)
-5. [Contributing](#contributing)
-6. [License](#license)
+1. [Umumiy ma'lumot](#umumiy-ma'lumot)
+2. [O'rnatish](#o'rnatish)
+3. [Foydalanish](#foydalanish)
+4. [Darslar](#darslar)
+5. [Hissa qo'shish](#hissa-qo'shish)
+6. [Litsenziya](#litsenziya)
 
-## Overview
+## Umumiy ma'lumot
 
-This tutorial is structured into multiple lessons, each focusing on different aspects of electromagnetic theory. It includes interactive elements, diagrams, and videos to enhance the learning experience.
+Ushbu qo'llanma elektromagnit nazariyaning turli jihatlariga bag'ishlangan bir nechta darslardan iborat. Unda interaktiv elementlar, diagrammalar va videolar mavjud bo'lib, o'rganish jarayonini yanada samarali qiladi.
 
-## Installation
+## O'rnatish
 
-To run this tutorial locally, follow these steps:
+Qo'llanmani mahalliy kompyuteringizda ishga tushirish uchun quyidagi bosqichlarni bajaring:
 
-1. Clone the repository:
+1. Repozitoriyani klonlang:
    ```
    git clone <repository-url>
    ```
-2. Navigate to the project directory:
+2. Loyihaning katalogiga o'ting:
    ```
    cd electromagnetic-tutorial
    ```
-3. Open `src/index.html` in your web browser to start the tutorial.
+3. `src/index.html` faylini veb-brauzeringizda oching va qo'llanmani boshlang.
 
-## Usage
+## Foydalanish
 
-Once you open the tutorial, you can navigate through the lessons using the provided links. Each lesson contains detailed explanations, diagrams, and videos to aid your understanding.
+Qo'llanmani ochganingizdan so'ng, berilgan havolalar yordamida darslar bo'ylab harakatlanishingiz mumkin. Har bir darsda batafsil tushuntirishlar, diagrammalar va videolar mavjud bo'lib, ular sizning tushunishingizga yordam beradi.
 
-## Lessons
+## Darslar
 
-- **Lesson 1:** Basics of Electromagnetic Fields and Waves
-- **Lesson 2:** Advanced Topics in Electromagnetic Theory
-- **Lesson 3:** Applications of Electromagnetic Fields and Waves in Technology
+- **1-dars:** Elektromagnit maydonlar va to'lqinlarning asoslari
+- **2-dars:** Elektromagnit nazariyaning ilg'or mavzulari
+- **3-dars:** Elektromagnit maydonlar va to'lqinlarning texnologiyadagi qo'llanilishi
 
-## Contributing
+## Hissa qo'shish
 
-Contributions are welcome! If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
+Hissa qo'shish uchun xush kelibsiz! Agar ushbu loyihaga hissa qo'shmoqchi bo'lsangiz, repozitoriyani fork qiling va o'zgartirishlaringiz bilan pull request yuboring.
 
-## License
+## Litsenziya
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+Ushbu loyiha MIT litsenziyasi asosida litsenziyalangan. Batafsil ma'lumot uchun LICENSE faylini ko'rib chiqing.
