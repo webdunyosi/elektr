@@ -3,34 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elektromagnit Darslik - Bosh sahifa</title>
+    <title>Elektromagnit Maydonlar va To'lqinlar</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-100 text-gray-800">
     <!-- Header -->
-    <header class="bg-gray-800 text-white py-4 text-center">
-        <h1 class="text-2xl font-bold">Elektromagnit Maydonlar va To'lqinlar</h1>
+    <header class="bg-gray-800 text-white py-6 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold">Elektromagnit Maydonlar va To'lqinlar</h1>
+        <p class="text-lg md:text-xl mt-2">"To'lqinlar olamiga ilmiy sayohat!"</p>
     </header>
 
     <!-- Navigation -->
-    <nav class="flex justify-center items-center flex-wrap gap-3 text-base my-5 text-center</nav>">
+    <nav class="flex justify-center items-center flex-wrap gap-4 text-base my-5 text-center">
         <a href="index.html" class="text-white bg-gray-800 px-4 py-2 rounded hover:bg-orange-500 transition">Bosh sahifa</a>
-        <a href="labs.html" class="text-white bg-gray-800 px-4 py-2 rounded hover:bg-orange-500 transition">Resurslar</a>
+        <a href="labs.html" class="text-white bg-gray-800 px-4 py-2 rounded hover:bg-orange-500 transition">Laboratoriya</a>
         <a href="lessons.html" class="text-white bg-gray-800 px-4 py-2 rounded hover:bg-orange-500 transition">Darslar</a>
         <a href="about.html" class="text-white bg-gray-800 px-4 py-2 rounded hover:bg-orange-500 transition">Haqida</a>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container mx-auto px-4">
-        <div class="lesson bg-white p-5 rounded shadow-md my-5">
-            <h2 class="text-xl font-bold text-gray-800">Xush kelibsiz!</h2>
-            <p class="mt-2 text-gray-600">Elektromagnit maydonlar va to'lqinlar haqida ko'proq bilib olish uchun darslarni o'rganing.</p>
+    <!-- Hero Section -->
+    <section class="bg-gray-200 py-10 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Elektromagnit maydonlar va to'lqinlar haqida ko'proq bilib oling!</h2>
+        <p class="text-gray-600 mt-4">Ushbu kurs sizga elektromagnit maydonlar, to'lqinlar, Maksvel tenglamalari va ularning real hayotdagi qo'llanilishini chuqur o'rganish imkonini beradi.</p>
+        <a href="lessons.html" class="mt-6 inline-block bg-orange-500 text-white px-6 py-3 rounded hover:bg-orange-600 transition">Darslarni boshlash</a>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="container mx-auto px-4 my-10">
+        <h2 class="text-2xl font-bold text-gray-800 text-center">Modullar</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white p-4 rounded shadow">
+                <h3 class="text-lg font-bold text-gray-800">Modul 1: Elektr maydonlar asoslari</h3>
+                <p class="text-gray-600 mt-2">Elektr maydonlarning nazariyasi va amaliy qo'llanilishi.</p>
+                <a href="lessons.html#modul1" class="text-blue-500 hover:underline mt-2 block">Ko'proq o'qish</a>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <h3 class="text-lg font-bold text-gray-800">Modul 2: Magnit maydonlar</h3>
+                <p class="text-gray-600 mt-2">Magnit maydonlarning xususiyatlari va ularning qo'llanilishi.</p>
+                <a href="lessons.html#modul2" class="text-blue-500 hover:underline mt-2 block">Ko'proq o'qish</a>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <h3 class="text-lg font-bold text-gray-800">Modul 3: Elektromagnit induksiya</h3>
+                <p class="text-gray-600 mt-2">Elektromagnit induksiya va uning texnologiyadagi roli.</p>
+                <a href="lessons.html#modul3" class="text-blue-500 hover:underline mt-2 block">Ko'proq o'qish</a>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="bg-gray-200 py-10">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 text-center">Foydali Resurslar</h2>
+            <ul class="list-disc pl-5 mt-4 text-gray-600">
+                <li><a download="majmua.docx" href="assets/libs/resources/MAJMUA_EMVaT_READY++++++.docx" class="text-blue-500 hover:underline">Majmua: Elektromagnit maydonlar</a></li>
+                <li><a href="https://www.khanacademy.org" class="text-blue-500 hover:underline">Khan Academy: Elektromagnitizm</a></li>
+                <li><a href="https://ocw.mit.edu" class="text-blue-500 hover:underline">MIT OpenCourseWare: Elektromagnitizm</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container mx-auto px-4 my-10">
+        <h2 class="text-2xl font-bold text-gray-800 text-center">Bog'lanish</h2>
+        <p class="text-gray-600 text-center mt-4">Savollar yoki takliflar uchun <a href="mailto:umida@example.com" class="text-blue-500 hover:underline">umida@example.com</a> manziliga murojaat qiling.</p>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2025 Elektromagnit Darslik | Muallif: Djabbarova Umida</p>
+        <p class="text-sm md:text-xl">&copy; 2025 Elektromagnit Darslik | Muallif: Djabbarova Umida</p>
     </footer>
 </body>
 </html>
