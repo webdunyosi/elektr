@@ -4,22 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elektromagnit Maydonlar va To'lqinlar</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-sans bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 py-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="index.html" class="text-white text-lg font-bold flex items-center">
+                <i class="bx bx-home text-2xl mr-2"></i> Elektromagnit
+            </a>
+            <button id="menu-toggle" class="text-white md:hidden focus:outline-none">
+                <i class="bx bx-menu text-2xl"></i>
+            </button>
+            <ul id="menu" class="hidden md:flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0">
+                <li><a href="index.html" class="text-white px-4 py-2 rounded hover:bg-orange-500 transition flex items-center"><i class="bx bx-home mr-2"></i> Bosh sahifa</a></li>
+                <li><a href="labs.html" class="text-white px-4 py-2 rounded hover:bg-orange-500 transition flex items-center"><i class="bx bx-flask mr-2"></i> Laboratoriya</a></li>
+                <li><a href="lessons.html" class="text-white px-4 py-2 rounded hover:bg-orange-500 transition flex items-center"><i class="bx bx-book mr-2"></i> Darslar</a></li>
+                <li><a href="about.html" class="text-white px-4 py-2 rounded hover:bg-orange-500 transition flex items-center"><i class="bx bx-info-circle mr-2"></i> Haqida</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
     <!-- Header -->
     <header class="bg-gray-800 text-white py-6 text-center">
         <h1 class="text-3xl md:text-4xl font-bold">Elektromagnit Maydonlar va To'lqinlar</h1>
         <p class="text-lg md:text-xl mt-2">"To'lqinlar olamiga ilmiy sayohat!"</p>
     </header>
-
-    <!-- Navigation -->
-    <nav class="flex justify-center items-center flex-wrap gap-4 text-base my-5 text-center">
-        <a href="index.html" class="text-white bg-gray-800 px-4 py-2 rounded hover:bg-orange-500 transition">Bosh sahifa</a>
-        <a href="labs.html" class="text-white bg-gray-800 px-4 py-2 rounded hover:bg-orange-500 transition">Laboratoriya</a>
-        <a href="lessons.html" class="text-white bg-gray-800 px-4 py-2 rounded hover:bg-orange-500 transition">Darslar</a>
-        <a href="about.html" class="text-white bg-gray-800 px-4 py-2 rounded hover:bg-orange-500 transition">Haqida</a>
-    </nav>
 
     <!-- Hero Section -->
     <section class="bg-gray-200 py-10 text-center">
