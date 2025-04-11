@@ -1,61 +1,190 @@
 <!DOCTYPE html>
 <html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elektromagnit Darslik - Darslar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="font-sans bg-gray-100 text-gray-800">
+  </head>
+  <body class="font-sans bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav
+      class="sticky top-0 left-0 right-0 bg-gray-800 py-2 md:py-0 px-5 lg:px-10 shadow-lg z-50 flex justify-between items-center"
+    >
+      <div class="max-w-6xl mx-auto flex justify-between items-center px-4">
+        <a
+          href="index.html"
+          class="text-white text-lg font-bold flex items-center"
+        >
+          <i class="bx bx-home text-2xl mr-2"></i> Elektromagnit
+        </a>
+        <button
+          id="menu-toggle"
+          class="text-white md:hidden focus:outline-none absolute right-10"
+        >
+          <i id="menu-icon" class="bx bx-menu text-2xl"></i>
+        </button>
+      </div>
+      <ul
+        id="menu"
+        class="absolute top-full left-0 w-full bg-gray-800 text-white flex-col space-y-2 px-4 py-4 opacity-0 pointer-events-none md:pointer-events-auto md:opacity-100 justify-end hidden md:flex md:static md:flex-row md:space-y-0 md:space-x-4 md:mt-0 md:bg-transparent transition-all duration-300 transform md:translate-y-0 -translate-y-2 z-40"
+      >
+        <li>
+          <a
+            href="index.html"
+            class="block px-4 py-2 rounded hover:bg-orange-500 transition flex items-center"
+            ><i class="bx bx-home mr-2"></i> Bosh sahifa</a
+          >
+        </li>
+        <li>
+          <a
+            href="labs.html"
+            class="block px-4 py-2 rounded hover:bg-orange-500 transition flex items-center"
+            ><i class="bx bxs-flask mr-2"></i> Laboratoriya</a
+          >
+        </li>
+        <li>
+          <a
+            href="lessons.html"
+            class="block px-4 py-2 rounded hover:bg-orange-500 transition flex items-center"
+            ><i class="bx bx-book mr-2"></i> Darslar</a
+          >
+        </li>
+        <li>
+          <a
+            href="about.html"
+            class="block px-4 py-2 rounded hover:bg-orange-500 transition flex items-center"
+            ><i class="bx bx-info-circle mr-2"></i> Haqida</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle")
+      const menu = document.getElementById("menu")
+      const menuIcon = document.getElementById("menu-icon")
+
+      menuToggle.addEventListener("click", () => {
+        const isHidden = menu.classList.contains("opacity-0")
+
+        if (isHidden) {
+          menu.classList.remove(
+            "opacity-0",
+            "pointer-events-none",
+            "-translate-y-2",
+            "hidden"
+          )
+          menu.classList.add("opacity-100", "translate-y-0")
+          menuIcon.classList.remove("bx-menu")
+          menuIcon.classList.add("bx-x")
+        } else {
+          menu.classList.remove("opacity-100", "translate-y-0")
+          menu.classList.add(
+            "opacity-0",
+            "pointer-events-none",
+            "-translate-y-2"
+          )
+          setTimeout(() => {
+            menu.classList.add("hidden")
+          }, 300)
+          menuIcon.classList.remove("bx-x")
+          menuIcon.classList.add("bx-menu")
+        }
+      })
+    </script>
+
     <!-- Header -->
     <header class="bg-gray-800 text-white py-4 text-center">
-        <h1 class="text-base md:text-2xl font-bold">Elektromagnit Maydonlar va To'lqinlar</h1>
+      <h1 class="text-base md:text-2xl font-bold">
+        Elektromagnit Maydonlar va To'lqinlar
+      </h1>
     </header>
-
-    <!-- Navigation -->
-    <nav class="flex justify-center items-center flex-wrap gap-2 md:gap-3 text-base my-5 text-center">
-        <a href="index.html" class="text-white text-sm md:text-base bg-gray-800 px-3 py-1 md:px-4 md:py-2 rounded hover:bg-orange-500 transition">Bosh sahifa</a>
-        <a href="labs.html" class="text-white text-sm md:text-base bg-gray-800 px-3 py-1 md:px-4 md:py-2 rounded hover:bg-orange-500 transition">Laboratoriya</a>
-        <a href="lessons.html" class="text-white text-sm md:text-base bg-gray-800 px-3 py-1 md:px-4 md:py-2 rounded hover:bg-orange-500 transition">Darslar</a>
-        <a href="about.html" class="text-white text-sm md:text-base bg-gray-800 px-3 py-1 md:px-4 md:py-2 rounded hover:bg-orange-500 transition">Haqida</a>
-    </nav>
 
     <!-- Main Content -->
     <div class="container mx-auto px-4">
-        <!-- 1-dars -->
-        <details class="bg-white p-5 rounded shadow-md my-5">
-            <summary class="cursor-pointer text-xl font-bold text-gray-800 hover:text-orange-500 transition">1-dars: Kirish</summary>
-            <p class="mt-2 text-gray-600">Elektromagnit maydonlar va to'lqinlarning asosiy tushunchalarini o'rganing.</p>
-            <!-- YouTube video -->
-            <div class="mt-4">
-                <iframe class="w-full md:w-2/3 h-64 md:h-96 rounded" src="https://www.youtube.com/embed/GMCtmS35kaw?si=NtnDQx9N6Z_bL1Lp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </details>
+      <!-- 1-dars -->
+      <details class="bg-white p-5 rounded shadow-md my-5">
+        <summary
+          class="cursor-pointer text-xl font-bold text-gray-800 hover:text-orange-500 transition"
+        >
+          1-dars: Kirish
+        </summary>
+        <p class="mt-2 text-gray-600">
+          Elektromagnit maydonlar va to'lqinlarning asosiy tushunchalarini
+          o'rganing.
+        </p>
+        <!-- YouTube video -->
+        <div class="mt-4">
+          <iframe
+            class="w-full md:w-2/3 h-64 md:h-96 rounded"
+            src="https://www.youtube.com/embed/GMCtmS35kaw?si=NtnDQx9N6Z_bL1Lp"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </details>
 
-        <!-- 2-dars -->
-        <details class="bg-white p-5 rounded shadow-md my-5">
-            <summary class="cursor-pointer text-xl font-bold text-gray-800 hover:text-orange-500 transition">2-dars: Maksvell Tenglamalari</summary>
-            <p class="mt-2 text-gray-600">Elektromagnetizmning asosiy tenglamalarini tushuning.</p>
-            <!-- YouTube video -->
-            <div class="mt-4">
-                <iframe class="w-full md:w-2/3 h-64 md:h-96 rounded" src="https://www.youtube.com/embed/-K40FGWIVXw?si=oe3T0V7I-PEkHZtr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </details>
+      <!-- 2-dars -->
+      <details class="bg-white p-5 rounded shadow-md my-5">
+        <summary
+          class="cursor-pointer text-xl font-bold text-gray-800 hover:text-orange-500 transition"
+        >
+          2-dars: Maksvell Tenglamalari
+        </summary>
+        <p class="mt-2 text-gray-600">
+          Elektromagnetizmning asosiy tenglamalarini tushuning.
+        </p>
+        <!-- YouTube video -->
+        <div class="mt-4">
+          <iframe
+            class="w-full md:w-2/3 h-64 md:h-96 rounded"
+            src="https://www.youtube.com/embed/-K40FGWIVXw?si=oe3T0V7I-PEkHZtr"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </details>
 
-        <!-- 3-dars -->
-        <details class="bg-white p-5 rounded shadow-md my-5">
-            <summary class="cursor-pointer text-xl font-bold text-gray-800 hover:text-orange-500 transition">3-dars: Elektromagnit To'lqinlar</summary>
-            <p class="mt-2 text-gray-600">Elektromagnit to'lqinlarning xususiyatlari va ularning qo'llanilishi haqida bilib oling.</p>
-            <!-- YouTube video -->
-            <div class="mt-4">
-                <iframe class="w-full md:w-2/3 h-64 md:h-96 rounded" src="https://www.youtube.com/embed/eO43TlUT1Ms?si=aNkhujZs8dTvqMWJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </details>
+      <!-- 3-dars -->
+      <details class="bg-white p-5 rounded shadow-md my-5">
+        <summary
+          class="cursor-pointer text-xl font-bold text-gray-800 hover:text-orange-500 transition"
+        >
+          3-dars: Elektromagnit To'lqinlar
+        </summary>
+        <p class="mt-2 text-gray-600">
+          Elektromagnit to'lqinlarning xususiyatlari va ularning qo'llanilishi
+          haqida bilib oling.
+        </p>
+        <!-- YouTube video -->
+        <div class="mt-4">
+          <iframe
+            class="w-full md:w-2/3 h-64 md:h-96 rounded"
+            src="https://www.youtube.com/embed/eO43TlUT1Ms?si=aNkhujZs8dTvqMWJ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </details>
     </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2025 Elektromagnit Darslik | Muallif: Djabbarova Umida</p>
+      <p>&copy; 2025 Elektromagnit Darslik | Muallif: Djabbarova Umida</p>
     </footer>
-</body>
+  </body>
 </html>
