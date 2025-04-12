@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elektromagnit Maydonlar va To'lqinlar</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -152,9 +153,7 @@
           <p class="text-gray-600 mt-2">
             Elektr maydonlarning nazariyasi va amaliy qo'llanilishi.
           </p>
-          <a
-            href="video.html"
-            class="text-blue-500 hover:underline mt-2 block"
+          <a href="video.html" class="text-blue-500 hover:underline mt-2 block"
             >Ko'proq o'qish</a
           >
         </div>
@@ -165,9 +164,7 @@
           <p class="text-gray-600 mt-2">
             Magnit maydonlarning xususiyatlari va ularning qo'llanilishi.
           </p>
-          <a
-            href="video.html"
-            class="text-blue-500 hover:underline mt-2 block"
+          <a href="video.html" class="text-blue-500 hover:underline mt-2 block"
             >Ko'proq o'qish</a
           >
         </div>
@@ -178,9 +175,7 @@
           <p class="text-gray-600 mt-2">
             Elektromagnit induksiya va uning texnologiyadagi roli.
           </p>
-          <a
-            href="video.html"
-            class="text-blue-500 hover:underline mt-2 block"
+          <a href="video.html" class="text-blue-500 hover:underline mt-2 block"
             >Ko'proq o'qish</a
           >
         </div>
@@ -219,16 +214,129 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="container mx-auto px-4 my-10">
-      <h2 class="text-2xl font-bold text-gray-800 text-center">Bog'lanish</h2>
-      <p class="text-gray-600 text-center mt-4">
-        Savollar yoki takliflar uchun
-        <a href="mailto:umida@example.com" class="text-blue-500 hover:underline"
-          >umida@example.com</a
-        >
-        manziliga murojaat qiling.
-      </p>
+    <section class="container mx-auto px-4 my-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">
+        Bog‘lanish
+      </h2>
+      <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
+        <form id="contactForm" class="space-y-6">
+          <div>
+            <label
+              for="name"
+              class="block mb-2 text-sm font-medium text-gray-700"
+            >
+              Ismingiz
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:outline-none transition"
+            />
+          </div>
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-700"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:outline-none transition"
+            />
+          </div>
+          <div>
+            <label
+              for="message"
+              class="block mb-2 text-sm font-medium text-gray-700"
+            >
+              Xabaringiz
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:outline-none transition"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-xl transition"
+          >
+            Xabar yuborish
+          </button>
+        </form>
+        <p id="formStatus" class="text-center mt-4 text-lg font-semibold"></p>
+      </div>
     </section>
+
+    <script>
+      const contactForm = document.getElementById("contactForm")
+      const statusText = document.getElementById("formStatus")
+
+      let telegramTokenBot = "7458632254:AAHXhIYOt73QDlREX8GMUGjklVziuD_kZMw"
+      let chatId = "5414733748"
+
+      const message = {
+        loading: "⏳ Xabar yuborilmoqda...",
+        success:
+          "✅ Xabar muvaffaqiyatli yuborildi! Tez orada siz bilan bog‘lanamiz.",
+        failure: "❌ Xatolik yuz berdi. Qayta urinib ko‘ring!",
+      }
+
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault()
+
+        const name = document.getElementById("name").value.trim()
+        const email = document.getElementById("email").value.trim()
+        const userMessage = document.getElementById("message").value.trim()
+
+        if (!name || !email || !userMessage) {
+          statusText.textContent = "Iltimos, barcha maydonlarni to‘ldiring!"
+          statusText.className =
+            "text-center mt-4 text-lg text-red-600 font-semibold animate-pulse"
+          return
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailPattern.test(email)) {
+          statusText.textContent = "Email noto‘g‘ri kiritilgan!"
+          statusText.className =
+            "text-center mt-4 text-lg text-red-600 font-semibold animate-pulse"
+          return
+        }
+
+        statusText.textContent = message.loading
+        statusText.className =
+          "text-center mt-4 text-lg text-blue-600 font-semibold animate-pulse"
+
+        axios
+          .post(`https://api.telegram.org/bot${telegramTokenBot}/sendMessage`, {
+            chat_id: chatId,
+            text: `📬 Yangi xabar:\n\n👤 Ism: ${name}\n📧 Email: ${email}\n💬 Xabar: ${userMessage}`,
+          })
+          .then(() => {
+            statusText.textContent = message.success
+            statusText.className =
+              "text-center mt-4 text-lg text-green-600 font-semibold animate-bounce"
+            contactForm.reset()
+          })
+          .catch(() => {
+            statusText.textContent = message.failure
+            statusText.className =
+              "text-center mt-4 text-lg text-red-600 font-semibold animate-bounce"
+          })
+          .finally(() => {
+            setTimeout(() => {
+              statusText.textContent = ""
+              statusText.className = ""
+            }, 2500) // 2.5 sekunddan keyin status yo‘q bo‘ladi
+          })
+      })
+    </script>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-8">
