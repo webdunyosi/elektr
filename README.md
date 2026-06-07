@@ -2,6 +2,8 @@
 
 Elektromagnit Maydonlar va To'lqinlar Qo'llanmasiga xush kelibsiz! Ushbu veb-asoslangan qo'llanma elektromagnit maydonlar va to'lqinlar bo'yicha fundamental tushunchalar, ilg'or nazariyalar va amaliy qo'llanmalarga oid keng qamrovli bilimlarni taqdim etish uchun mo'ljallangan.
 
+**Loyiha havolasi (Live):** [https://elektr.vercel.app/](https://elektr.vercel.app/)
+
 ## Mundarija
 
 1. [Umumiy ma'lumot](#umumiy-ma'lumot)
