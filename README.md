@@ -1,59 +1,50 @@
-# Food Lover
-Food Lover for Restarant
+# Elektromagnit Maydonlar va To‘lqinlar
 
-- Html5
-- Tailwindcss
-- JavaScript
-- Can you view my [project](https://elektr.vercel.app/)
+Elektromagnit Maydonlar va To‘lqinlar bo‘yicha interaktiv qo‘llanma va darslik sayti. Sayt elektromagnit maydonlar, to‘lqinlar, Maksvel tenglamalari va ularning amaliy qo‘llanilishini chuqur o‘rganish imkonini beradi.
 
-<<<<<<< HEAD
-**Loyiha havolasi (Live):** [https://elektr.vercel.app/](https://elektr.vercel.app/)
+**Jonli havola (Live Demo):** [https://elektr.vercel.app/](https://elektr.vercel.app/)
 
-## Mundarija
+---
 
-1. [Umumiy ma'lumot](#umumiy-ma'lumot)
-2. [O'rnatish](#o'rnatish)
-3. [Foydalanish](#foydalanish)
-4. [Darslar](#darslar)
-5. [Hissa qo'shish](#hissa-qo'shish)
-6. [Litsenziya](#litsenziya)
+## 🚀 Loyiha Xususiyatlari
 
-## Umumiy ma'lumot
+- **Interaktiv Modullar:** Elektr maydonlar asoslari, magnit maydonlar va elektromagnit induksiya darslari.
+- **Video darslar:** Mavzular bo‘yicha tushunarli va qiziqarli video darslar to‘plami.
+- **Yuklab olinadigan materiallar:** Loyihaning ma'ruza matnlari va majmualarini Word/Docx formatida yuklab olish imkoniyati.
+- **Bog‘lanish formasi:** Sayt foydalanuvchilari Telegram bot orqali muallif bilan to‘g‘ridan-to‘g‘ri bog‘lana olishlari mumkin.
+- **Moslashuvchan Dizayn (Responsive):** Mobil, planshet va kompyuter ekranlari uchun to‘liq moslashtirilgan interfeys.
 
-Ushbu qo'llanma elektromagnit nazariyaning turli jihatlariga bag'ishlangan bir nechta darslardan iborat. Unda interaktiv elementlar, diagrammalar va videolar mavjud bo'lib, o'rganish jarayonini yanada samarali qiladi.
+## 🛠 Texnologiyalar
 
-## O'rnatish
+Loyiha quyidagi texnologiyalar yordamida yaratilgan:
 
-Qo'llanmani mahalliy kompyuteringizda ishga tushirish uchun quyidagi bosqichlarni bajaring:
+- **HTML5** — Sayt strukturasi
+- **Tailwind CSS** — Zamonaviy va moslashuvchan dizayn
+- **JavaScript (Vanilla)** — Dinamik funksionallik va menyu boshqaruvi
+- **Axios** — Telegram API orqali xabarlarni yuborish
+- **Boxicons** — Chiroyli va zamonaviy ikonkalar to‘plami
+
+## 💻 Loyihani Mahalliy Ishga Tushirish
 
 1. Repozitoriyani klonlang:
+   ```bash
+   git clone https://github.com/alimardon-toshpulatov/electromagnetic-tutorial.git
    ```
-   git clone <repository-url>
-   ```
-2. Loyihaning katalogiga o'ting:
-   ```
+   *(Eslatma: o‘z repozitoriyangiz manzilini kiriting)*
+
+2. Loyiha katalogiga o'ting:
+   ```bash
    cd electromagnetic-tutorial
    ```
-3. `src/index.html` faylini veb-brauzeringizda oching va qo'llanmani boshlang.
 
-## Foydalanish
+3. Loyihani brauzerda ochish uchun:
+   `index.html` faylini istalgan brauzerda oching.
 
-Qo'llanmani ochganingizdan so'ng, berilgan havolalar yordamida darslar bo'ylab harakatlanishingiz mumkin. Har bir darsda batafsil tushuntirishlar, diagrammalar va videolar mavjud bo'lib, ular sizning tushunishingizga yordam beradi.
+## 👥 Mualliflar va Yaratuvchilar
 
-## Darslar
+- **Darslik muallifi:** Djabborova Umida
+- **Dasturchi:** Toshpo'latov Alimardon (2025)
 
-- **1-dars:** Elektromagnit maydonlar va to'lqinlarning asoslari
-- **2-dars:** Elektromagnit nazariyaning ilg'or mavzulari
-- **3-dars:** Elektromagnit maydonlar va to'lqinlarning texnologiyadagi qo'llanilishi
+## 📄 Litsenziya
 
-## Hissa qo'shish
-
-Hissa qo'shish uchun xush kelibsiz! Agar ushbu loyihaga hissa qo'shmoqchi bo'lsangiz, repozitoriyani fork qiling va o'zgartirishlaringiz bilan pull request yuboring.
-
-## Litsenziya
-
-Ushbu loyiha MIT litsenziyasi asosida litsenziyalangan. Batafsil ma'lumot uchun LICENSE faylini ko'rib chiqing.
-=======
-# Author 
-(2025) Toshpo'latov Alimardon
->>>>>>> 204d70ce78066337f3dd51e8f7e8229969d3855e
+Ushbu loyiha [MIT](LICENSE) litsenziyasi ostida tarqatiladi.
