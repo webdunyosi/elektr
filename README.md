@@ -1,7 +1,12 @@
-# Elektromagnit Maydonlar va To'lqinlar Qo'llanmasi
+# Food Lover
+Food Lover for Restarant
 
-Elektromagnit Maydonlar va To'lqinlar Qo'llanmasiga xush kelibsiz! Ushbu veb-asoslangan qo'llanma elektromagnit maydonlar va to'lqinlar bo'yicha fundamental tushunchalar, ilg'or nazariyalar va amaliy qo'llanmalarga oid keng qamrovli bilimlarni taqdim etish uchun mo'ljallangan.
+- Html5
+- Tailwindcss
+- JavaScript
+- Can you view my [project](https://elektr.vercel.app/)
 
+<<<<<<< HEAD
 **Loyiha havolasi (Live):** [https://elektr.vercel.app/](https://elektr.vercel.app/)
 
 ## Mundarija
@@ -48,3 +53,7 @@ Hissa qo'shish uchun xush kelibsiz! Agar ushbu loyihaga hissa qo'shmoqchi bo'lsa
 ## Litsenziya
 
 Ushbu loyiha MIT litsenziyasi asosida litsenziyalangan. Batafsil ma'lumot uchun LICENSE faylini ko'rib chiqing.
+=======
+# Author 
+(2025) Toshpo'latov Alimardon
+>>>>>>> 204d70ce78066337f3dd51e8f7e8229969d3855e
